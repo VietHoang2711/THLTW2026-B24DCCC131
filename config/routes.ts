@@ -42,6 +42,12 @@
 		icon: 'OrderedListOutlined',
 		component: './TodoList',
 	},
+	{
+		path: '/san-pham',
+		name: 'SanPham',
+		icon: 'ShoppingOutlined',
+		component: './SanPham',
+	},
 
 	// DANH MUC HE THONG
 	// {

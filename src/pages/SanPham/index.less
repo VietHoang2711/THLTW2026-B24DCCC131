@@ -1,0 +1,58 @@
+.container {
+  padding: 24px;
+  background: #fff;
+  border-radius: 4px;
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+    gap: 16px;
+
+    h1 {
+      margin: 0;
+      font-size: 24px;
+      font-weight: 600;
+      color: #000;
+    }
+  }
+
+  .toolbar {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .price {
+    color: #1890ff;
+    font-weight: 500;
+  }
+
+  .quantity {
+    color: #52c41a;
+    font-weight: 500;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    .header {
+      flex-direction: column;
+      align-items: flex-start;
+
+      h1 {
+        font-size: 20px;
+      }
+    }
+
+    .toolbar {
+      width: 100%;
+
+      input {
+        width: 100% !important;
+      }
+    }
+  }
+}
