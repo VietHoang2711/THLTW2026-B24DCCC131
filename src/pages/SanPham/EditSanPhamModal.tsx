@@ -1,20 +1,33 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Form, Input, InputNumber, Modal, ModalProps, Select } from 'antd';
 import { SanPham } from '@/models/sanpham';
 
-interface AddSanPhamModalProps extends Omit<ModalProps, 'onOk'> {
+interface EditSanPhamModalProps extends Omit<ModalProps, 'onOk'> {
+  product: SanPham;
   onOk: (values: Omit<SanPham, 'id'>) => void;
   loading?: boolean;
 }
 
 const categories = ['Laptop', 'Điện thoại', 'Máy tính bảng', 'Phụ kiện'];
 
-export const AddSanPhamModal: React.FC<AddSanPhamModalProps> = ({
+export const EditSanPhamModal: React.FC<EditSanPhamModalProps> = ({
+  product,
   onOk,
   loading = false,
   ...modalProps
 }) => {
   const [form] = Form.useForm();
+
+  useEffect(() => {
+    if (product) {
+      form.setFieldsValue({
+        name: product.name,
+        category: product.category,
+        price: product.price,
+        quantity: product.quantity,
+      });
+    }
+  }, [product, form]);
 
   const handleOk = async () => {
     try {
@@ -33,8 +46,8 @@ export const AddSanPhamModal: React.FC<AddSanPhamModalProps> = ({
 
   return (
     <Modal
-      title="Thêm Sản phẩm"
-      okText="Thêm mới"
+      title={`Sửa Sản phẩm: ${product.name}`}
+      okText="Cập nhật"
       cancelText="Hủy"
       onOk={handleOk}
       onCancel={handleCancel}
@@ -112,8 +125,8 @@ export const AddSanPhamModal: React.FC<AddSanPhamModalProps> = ({
             },
             {
               type: 'number',
-              min: 1,
-              message: 'Số lượng phải là số nguyên dương',
+              min: 0,
+              message: 'Số lượng phải là số không âm',
             },
             {
               pattern: /^[0-9]+$/,
@@ -124,7 +137,7 @@ export const AddSanPhamModal: React.FC<AddSanPhamModalProps> = ({
           <InputNumber
             placeholder="Nhập số lượng"
             style={{ width: '100%' }}
-            min={1}
+            min={0}
             step={1}
           />
         </Form.Item>

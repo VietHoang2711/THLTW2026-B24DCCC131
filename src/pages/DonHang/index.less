@@ -19,22 +19,6 @@
     }
   }
 
-  .toolbar {
-    display: flex;
-    gap: 12px;
-    flex-wrap: wrap;
-  }
-
-  .price {
-    color: #1890ff;
-    font-weight: 500;
-  }
-
-  .quantity {
-    color: #52c41a;
-    font-weight: 500;
-  }
-
   .statistic {
     text-align: center;
 
@@ -50,6 +34,21 @@
       color: #1890ff;
     }
   }
+
+  .detailSection {
+    margin-bottom: 24px;
+
+    h3 {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+
+    p {
+      margin-bottom: 8px;
+      font-size: 14px;
+    }
+  }
 }
 
 @media (max-width: 768px) {
@@ -61,10 +60,6 @@
       h1 {
         font-size: 20px;
       }
-    }
-
-    .toolbar {
-      width: 100%;
     }
   }
 }
