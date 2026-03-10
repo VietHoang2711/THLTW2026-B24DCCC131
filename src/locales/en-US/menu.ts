@@ -8,4 +8,8 @@ export default {
   'menu.DanhMuc': 'Danh mục',
   'menu.DanhMuc.ChucVu': 'Chức vụ',
   'menu.DanhMuc.LoaiPhongBan': 'Loại phòng ban',
+  'menu.DoanSo': 'Đoán số',
+  'menu.HocTap': 'Học tập',
+  'menu.GuessNumberGame': 'Guess Number Game',
+  'menu.QuanLyHocTap': 'Study Management',
 };

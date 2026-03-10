@@ -9,10 +9,7 @@
 				name: 'login',
 				component: './user/Login',
 			},
-			{
-				path: '/user',
-				redirect: '/user/login',
-			},
+			
 		],
 	},
 
@@ -43,10 +40,16 @@
 		component: './TodoList',
 	},
 	{
-		path: '/san-pham',
-		name: 'SanPham',
-		icon: 'ShoppingOutlined',
-		component: './SanPham',
+		path: '/doan-so',
+		name: 'DoanSo',
+		icon: 'QuestionOutlined',
+		component: './DoanSo',
+	},
+	{
+		path: '/hoc-tap',
+		name: 'HocTap',
+		icon: 'BookOutlined',
+		component: './HocTap',
 	},
 
 	// DANH MUC HE THONG
@@ -64,27 +67,27 @@
 	// },
 
 	{
-		path: '/notification',
-		routes: [
-			{
-				path: './subscribe',
-				exact: true,
-				component: './ThongBao/Subscribe',
-			},
-			{
-				path: './check',
-				exact: true,
-				component: './ThongBao/Check',
-			},
-			{
-				path: './',
-				exact: true,
-				component: './ThongBao/NotifOneSignal',
-			},
-		],
-		layout: false,
-		hideInMenu: true,
-	},
+	path: '/notification',
+	routes: [
+		{
+			path: '/notification/subscribe',
+			exact: true,
+			component: './ThongBao/Subscribe',
+		},
+		{
+			path: '/notification/check',
+			exact: true,
+			component: './ThongBao/Check',
+		},
+		{
+			path: '/notification',
+			exact: true,
+			component: './ThongBao/NotifOneSignal',
+		},
+	],
+	layout: false,
+	hideInMenu: true,
+},
 	{
 		path: '/',
 	},
