@@ -14,6 +14,8 @@
 	},
 
 	///////////////////////////////////
+
+			
 	// DEFAULT MENU
 	{
 		path: '/dashboard',
@@ -52,6 +54,18 @@
 		component: './HocTap',
 	},
 
+	{
+		path: '/oan-tu-ti',
+		name: 'OanTuTi',
+		icon: 'PlayCircleOutlined',
+		component: './oantuti',
+	},
+{
+				path: '/ngan-hang-cau-hoi',
+				name: 'NganHangCauHoi',
+				icon: 'DatabaseOutlined',
+				component: './Exam',
+			},
 	// DANH MUC HE THONG
 	// {
 	// 	name: 'DanhMuc',
