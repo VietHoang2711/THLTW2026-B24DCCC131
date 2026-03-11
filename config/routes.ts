@@ -56,13 +56,13 @@
 
 	{
 		path: '/oan-tu-ti',
-		name: 'OanTuTi',
+		name: 'Oẳn Tù Tì',
 		icon: 'PlayCircleOutlined',
 		component: './oantuti',
 	},
 {
 				path: '/ngan-hang-cau-hoi',
-				name: 'NganHangCauHoi',
+				name: 'Ngân Hàng Câu Hỏi',
 				icon: 'DatabaseOutlined',
 				component: './Exam',
 			},
