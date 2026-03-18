@@ -66,6 +66,12 @@
 				icon: 'DatabaseOutlined',
 				component: './Exam',
 			},
+			{
+				path: '/dich-vu',
+				name: 'Dịch Vụ',
+				icon: 'SettingOutlined',
+				component: './DichVu',
+			},
 	// DANH MUC HE THONG
 	// {
 	// 	name: 'DanhMuc',
