@@ -72,6 +72,12 @@
 				icon: 'SettingOutlined',
 				component: './DichVu',
 			},
+			{
+				path: '/bang-cap',
+				name: 'Quản Lý Văn Bằng',
+				icon: 'FileTextOutlined',
+				component: './BangCap',
+			},
 	// DANH MUC HE THONG
 	// {
 	// 	name: 'DanhMuc',
