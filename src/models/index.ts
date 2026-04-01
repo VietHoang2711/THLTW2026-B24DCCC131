@@ -1,4 +1,5 @@
 export * from './bangcap';
+export * from './caulacbo';
 export * from './dichvu';
 export * from './danhmuc';
 export * from './sanpham';

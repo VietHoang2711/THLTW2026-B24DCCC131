@@ -78,6 +78,12 @@
 				icon: 'FileTextOutlined',
 				component: './BangCap',
 			},
+			{
+				path: '/cau-lac-bo',
+				name: 'Câu Lạc Bộ',
+				icon: 'TeamOutlined',
+				component: './CauLacBo',
+			},
 	// DANH MUC HE THONG
 	// {
 	// 	name: 'DanhMuc',
