@@ -9,13 +9,11 @@
 				name: 'login',
 				component: './user/Login',
 			},
-			
 		],
 	},
 
 	///////////////////////////////////
 
-			
 	// DEFAULT MENU
 	{
 		path: '/dashboard',
@@ -60,30 +58,58 @@
 		icon: 'PlayCircleOutlined',
 		component: './oantuti',
 	},
-{
-				path: '/ngan-hang-cau-hoi',
-				name: 'Ngân Hàng Câu Hỏi',
-				icon: 'DatabaseOutlined',
-				component: './Exam',
+	{
+		path: '/ngan-hang-cau-hoi',
+		name: 'Ngân Hàng Câu Hỏi',
+		icon: 'DatabaseOutlined',
+		component: './Exam',
+	},
+	{
+		path: '/dich-vu',
+		name: 'Dịch Vụ',
+		icon: 'SettingOutlined',
+		component: './DichVu',
+	},
+	{
+		path: '/bang-cap',
+		name: 'Quản Lý Văn Bằng',
+		icon: 'FileTextOutlined',
+		component: './BangCap',
+	},
+	{
+		path: '/cau-lac-bo',
+		name: 'Câu Lạc Bộ',
+		icon: 'TeamOutlined',
+		component: './CauLacBo',
+	},
+	{
+		path: '/travel',
+		name: 'Du Lịch',
+		icon: 'CompassOutlined',
+		routes: [
+			{
+				path: '/travel/discover',
+				name: 'Khám Phá',
+				component: './Travel/Discover',
 			},
 			{
-				path: '/dich-vu',
-				name: 'Dịch Vụ',
-				icon: 'SettingOutlined',
-				component: './DichVu',
+				path: '/travel/planner',
+				name: 'Lập Kế Hoạch',
+				component: './Travel/Planner',
 			},
 			{
-				path: '/bang-cap',
-				name: 'Quản Lý Văn Bằng',
-				icon: 'FileTextOutlined',
-				component: './BangCap',
+				path: '/travel/budget',
+				name: 'Ngân Sách',
+				component: './Travel/Budget',
 			},
 			{
-				path: '/cau-lac-bo',
-				name: 'Câu Lạc Bộ',
-				icon: 'TeamOutlined',
-				component: './CauLacBo',
+				path: '/travel/admin',
+				name: 'Travel Admin',
+				component: './Travel/Admin',
 			},
+		],
+	},
+
 	// DANH MUC HE THONG
 	// {
 	// 	name: 'DanhMuc',
@@ -99,27 +125,27 @@
 	// },
 
 	{
-	path: '/notification',
-	routes: [
-		{
-			path: '/notification/subscribe',
-			exact: true,
-			component: './ThongBao/Subscribe',
-		},
-		{
-			path: '/notification/check',
-			exact: true,
-			component: './ThongBao/Check',
-		},
-		{
-			path: '/notification',
-			exact: true,
-			component: './ThongBao/NotifOneSignal',
-		},
-	],
-	layout: false,
-	hideInMenu: true,
-},
+		path: '/notification',
+		routes: [
+			{
+				path: '/notification/subscribe',
+				exact: true,
+				component: './ThongBao/Subscribe',
+			},
+			{
+				path: '/notification/check',
+				exact: true,
+				component: './ThongBao/Check',
+			},
+			{
+				path: '/notification',
+				exact: true,
+				component: './ThongBao/NotifOneSignal',
+			},
+		],
+		layout: false,
+		hideInMenu: true,
+	},
 	{
 		path: '/',
 	},
