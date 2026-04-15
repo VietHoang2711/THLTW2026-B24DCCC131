@@ -83,6 +83,12 @@
 		component: './CauLacBo',
 	},
 	{
+		path: '/don-hang',
+		name: 'Quản Lý Đơn Hàng',
+		icon: 'ShoppingOutlined',
+		component: './DonHang',
+	},
+	{
 		path: '/travel',
 		name: 'Du Lịch',
 		icon: 'CompassOutlined',
