@@ -89,6 +89,34 @@
 		component: './DonHang',
 	},
 	{
+		path: '/blog',
+		name: 'Blog Cá Nhân',
+		icon: 'FileTextOutlined',
+		routes: [
+			{
+				path: '/blog',
+				exact: true,
+				name: 'Bài Viết',
+				component: './Blog',
+			},
+			{
+				path: '/blog/about',
+				name: 'Về Tôi',
+				component: './Blog/about',
+			},
+			{
+				path: '/blog/detail/:slug',
+				hideInMenu: true,
+				component: './Blog/detail',
+			},
+			{
+				path: '/blog/management',
+				name: 'Quản Lý',
+				component: './Blog/management',
+			},
+		],
+	},
+	{
 		path: '/travel',
 		name: 'Du Lịch',
 		icon: 'CompassOutlined',

@@ -1,0 +1,69 @@
+.container {
+	padding: 24px 0;
+}
+
+.toolbar {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 12px;
+	margin-bottom: 16px;
+	padding-bottom: 16px;
+	border-bottom: 1px solid #f0f0f0;
+
+	:global(.ant-space) {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 8px;
+	}
+}
+
+.addTagSection {
+	margin-bottom: 24px;
+	padding: 16px;
+	background-color: #fafafa;
+	border-radius: 4px;
+
+	h3 {
+		margin-top: 0;
+		margin-bottom: 16px;
+	}
+}
+
+.tagCard {
+	text-align: center;
+	border-radius: 8px;
+	cursor: pointer;
+	transition: all 0.3s ease;
+
+	&:hover {
+		box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+		transform: translateY(-4px);
+	}
+}
+
+.tagName {
+	margin-bottom: 8px;
+	color: #667eea;
+	font-weight: 600;
+	font-size: 18px;
+}
+
+.tagCount {
+	color: #999;
+	font-size: 14px;
+}
+
+@media (max-width: 768px) {
+	.toolbar {
+		flex-direction: column;
+
+		:global(.ant-space-item) {
+			width: 100%;
+
+			:global(.ant-input),
+			:global(.ant-select) {
+				width: 100% !important;
+			}
+		}
+	}
+}
