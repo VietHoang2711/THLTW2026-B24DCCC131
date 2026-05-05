@@ -18,8 +18,8 @@
 	{
 		path: '/dashboard',
 		name: 'Dashboard',
-		component: './TrangChu',
-		icon: 'HomeOutlined',
+		icon: 'DashboardOutlined',
+		component: './Dashboard',
 	},
 	{
 		path: '/gioi-thieu',
@@ -146,10 +146,10 @@
 
 	// DANH MUC HE THONG
 	// {
-	// 	name: 'DanhMuc',
-	// 	path: '/danh-muc',
-	// 	icon: 'copy',
-	// 	routes: [
+	//  	name: 'DanhMuc',
+	//  	path: '/danh-muc',
+	//  	icon: 'copy',
+	//  	routes: [
 	// 		{
 	// 			name: 'ChucVu',
 	// 			path: 'chuc-vu',
@@ -193,6 +193,33 @@
 		component: './exception/DangCapNhat',
 		layout: false,
 	},
+
+	// Custom health/fitness pages
+	{
+		path: '/workout-log',
+		name: 'Workout Log',
+		icon: 'ScheduleOutlined',
+		component: './WorkoutLog',
+	},
+	{
+		path: '/health-log',
+		name: 'Health Log',
+		icon: 'HeartOutlined',
+		component: './HealthLog',
+	},
+	{
+		path: '/goals',
+		name: 'Goals',
+		icon: 'FlagOutlined',
+		component: './Goals',
+	},
+	{
+		path: '/exercise-library',
+		name: 'Exercise Library',
+		icon: 'AppstoreOutlined',
+		component: './ExerciseLibrary',
+	},
+
 	{
 		component: './exception/404',
 	},
