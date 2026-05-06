@@ -21,15 +21,10 @@ const weightLog = [
 const Dashboard: React.FC = () => {
 	const totalSessions = mockSessions.length;
 	const totalCalories = mockSessions.reduce((s, i) => s + i.calories, 0);
-
-	const streak = 3; // simplified mock
-
+	const streak = 3;
 	const goalPercent = 45;
 
-	const weeklyCounts = useMemo(() => {
-		// group by week index (simple mock)
-		return [2, 1, 2, 1];
-	}, []);
+	const weeklyCounts = useMemo(() => [2, 1, 2, 1], []);
 
 	return (
 		<div>
@@ -60,10 +55,7 @@ const Dashboard: React.FC = () => {
 				<Col span={12}>
 					<Card title='Buổi tập theo tuần'>
 						<Chart
-							options={{
-								chart: { id: 'sessions' },
-								xaxis: { categories: ['W1', 'W2', 'W3', 'W4'] },
-							}}
+							options={{ chart: { id: 'sessions' }, xaxis: { categories: ['W1', 'W2', 'W3', 'W4'] } }}
 							series={[{ name: 'Buổi tập', data: weeklyCounts }]}
 							type='bar'
 							height={300}
@@ -73,10 +65,7 @@ const Dashboard: React.FC = () => {
 				<Col span={12}>
 					<Card title='Cân nặng theo thời gian'>
 						<Chart
-							options={{
-								chart: { id: 'weight' },
-								xaxis: { categories: weightLog.map((w) => w.date) },
-							}}
+							options={{ chart: { id: 'weight' }, xaxis: { categories: weightLog.map((w) => w.date) } }}
 							series={[{ name: 'Cân nặng', data: weightLog.map((w) => w.weight) }]}
 							type='line'
 							height={300}

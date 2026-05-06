@@ -19,7 +19,7 @@
 		path: '/dashboard',
 		name: 'Dashboard',
 		icon: 'DashboardOutlined',
-		component: './Dashboard',
+		component: './TrangChu',
 	},
 	{
 		path: '/gioi-thieu',
@@ -196,30 +196,42 @@
 
 	// Custom health/fitness pages
 	{
-		path: '/workout-log',
-		name: 'Workout Log',
-		icon: 'ScheduleOutlined',
-		component: './WorkoutLog',
+		path: '/theo-doi-suc-khoe',
+		name: 'Theo Dõi Sức Khỏe',
+		icon: 'CompassOutlined',
+		routes: [
+			{
+				path: '/theo-doi-suc-khoe/dashboard',
+				name: 'Dashboard',
+				icon: 'DashboardOutlined',
+				component: './TheoDoiSucKhoe/Dashboard',
+			},
+			{
+				path: '/theo-doi-suc-khoe/workout-log',
+				name: 'Workout Log',
+				icon: 'ScheduleOutlined',
+				component: './TheoDoiSucKhoe/WorkoutLog',
+			},
+			{
+				path: '/theo-doi-suc-khoe/health-log',
+				name: 'Health Log',
+				icon: 'HeartOutlined',
+				component: './TheoDoiSucKhoe/HealthLog',
+			},
+			{
+				path: '/theo-doi-suc-khoe/goals',
+				name: 'Goals',
+				icon: 'FlagOutlined',
+				component: './TheoDoiSucKhoe/Goals',
+			},
+			{
+				path: '/theo-doi-suc-khoe/exercise-library',
+				name: 'Exercise Library',
+				icon: 'AppstoreOutlined',
+				component: './TheoDoiSucKhoe/ExerciseLibrary',
+			},
+		],
 	},
-	{
-		path: '/health-log',
-		name: 'Health Log',
-		icon: 'HeartOutlined',
-		component: './HealthLog',
-	},
-	{
-		path: '/goals',
-		name: 'Goals',
-		icon: 'FlagOutlined',
-		component: './Goals',
-	},
-	{
-		path: '/exercise-library',
-		name: 'Exercise Library',
-		icon: 'AppstoreOutlined',
-		component: './ExerciseLibrary',
-	},
-
 	{
 		component: './exception/404',
 	},
