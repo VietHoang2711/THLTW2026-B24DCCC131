@@ -233,6 +233,31 @@
 		],
 	},
 	{
+		path: '/theo-doi-cong-viec',
+		name: 'Theo Dõi Công Việc',
+		icon: 'UnorderedListOutlined',
+		routes: [
+			{
+				path: '/theo-doi-cong-viec/dashboard',
+				name: 'Dashboard',
+				icon: 'DashboardOutlined',
+				component: './TheoDoiCongViec/Dashboard',
+			},
+			{
+				path: '/theo-doi-cong-viec/kanban',
+				name: 'Kanban',
+				icon: 'AppstoreOutlined',
+				component: './TheoDoiCongViec/Kanban',
+			},
+			{
+				path: '/theo-doi-cong-viec/list',
+				name: 'Danh Sách',
+				icon: 'OrderedListOutlined',
+				component: './TheoDoiCongViec/TaskList',
+			},
+		],
+	},
+	{
 		component: './exception/404',
 	},
 ];
